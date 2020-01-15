@@ -1,4 +1,4 @@
-FROM ubuntu:latest as builder
+FROM ubuntu:latest
 
 RUN apt-get update
 RUN apt-get install -y ruby2.5 libruby2.5 ruby2.5-dev bundler \
