@@ -4,9 +4,6 @@ ENV LANGUAGE en_US.UTF-8
 ENV LANG en_US.UTF-8 
 ENV LC_ALL en_US.UTF-8
 
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-
 RUN apt-get update
 
 RUN DEBIAN_FRONTEND=noninteractive apt install -y tzdata
@@ -15,7 +12,12 @@ RUN apt-get install -y ruby2.5 libruby2.5 ruby2.5-dev bundler \
                      libmagickwand-dev libxml2-dev libxslt1-dev nodejs \
                      apache2 apache2-dev build-essential git-core phantomjs \
                      libsasl2-dev libpq-dev postgresql-contrib postgresql-server-dev-all \
-                     imagemagick libffi-dev libgd-dev libarchive-dev libbz2-dev	yarn	
+                     imagemagick libffi-dev libgd-dev libarchive-dev libbz2-dev
+					 
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
+RUN apt-get update && apt-get install -y yarn
 
 RUN apt-get remove -y bundler
 
