@@ -53,26 +53,7 @@ RUN cd openstreetmap-website && bundle install  && \
 		
 RUN locale-gen en_US.UTF-8
 		
-RUN useradd -m linuxbrew
-
-USER linuxbrew
-
-RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-
-RUN export PATH=/home/linuxbrew/.linuxbrew/bin:/usr/sbin:/usr/bin:/sbin:/bin && \
-        brew update && \
-        brew install pngcrush &&  \
-        brew install optipng  && \
-        #brew install  advpng  &&  \  
-        brew install optipng  &&  \
-        brew install pngquant &&  \ 
-        brew install  jhead  &&  \ 
-        brew install  jpegoptim  &&  \ 
-        #brew install  jpegtran  &&  \
-        brew install  gifsicle &&  \ 
-        brew install  svgo
-		
-USER root
+RUN apt-get install -y pngcrush optipng pngquant jhead jpegoptim gifsicle
 
 RUN apt-get clean
 
