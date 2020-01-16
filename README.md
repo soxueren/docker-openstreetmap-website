@@ -1,4 +1,4 @@
-# import pbf to postgres
+# import pbf
 ```
  osmosis --read-pbf xxx.osm.pbf --write-apidb host="localhost" database="osm"  user="postgres" password="123456" validateSchemaVersion="no"
 ```
