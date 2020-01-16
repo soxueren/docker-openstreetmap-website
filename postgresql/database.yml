@@ -5,8 +5,8 @@ development:
   adapter: postgresql
   database: osm
   username: postgres
-  password: 402sjgs
-  host: 10.0.4.5
+  password: 123456
+  host: localhost
   encoding: utf8
 
 # Warning: The database defined as 'test' will be erased and
@@ -16,14 +16,14 @@ test:
   adapter: postgresql
   database: osm
   username: postgres
-  password: 402sjgs
-  host: 10.0.4.5
+  password: 123456
+  host: localhost
   encoding: utf8
 
 production:
   adapter: postgresql
   database: osm
   username: postgres
-  password: 402sjgs
-  host: 10.0.4.5
+  password: 123456
+  host: localhost
   encoding: utf8
