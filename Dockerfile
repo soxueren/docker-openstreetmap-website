@@ -10,7 +10,7 @@ RUN apt-get install -y ruby2.5 libruby2.5 ruby2.5-dev bundler \
                      libsasl2-dev \
                      imagemagick libffi-dev libgd-dev libarchive-dev libbz2-dev		
 
-RUN git clone --depth=1 https://github.com/openstreetmap/openstreetmap-website.git
+RUN git clone --depth=1 https://github.com/soxueren/openstreetmap-website.git
 
 RUN apt-get remove -y bundler
 
