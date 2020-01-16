@@ -44,6 +44,18 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/so
 RUN sudo apt-get update && sudo apt-get install yarn
 RUN cd openstreetmap-website && bundle exec rake yarn:install
 
+RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+RUN brew install pngcrush &&  \
+       brew install optipng  && \
+       brew install  advpng  &&  \  
+       brew install optipng  &&  \
+       brew install pngquant &&  \ 
+       brew install  jhead  &&  \ 
+       brew install  jpegoptim  &&  \ 
+       brew install  jpegtran  &&  \
+       brew install  gifsicle &&  \ 
+       brew install  svgo
+
 RUN apt-get clean
 
 CMD ["bash"]
