@@ -1,10 +1,11 @@
 FROM ubuntu:latest
 
+RUN apt-get update
+
 ENV LANGUAGE en_US.UTF-8 
 ENV LANG en_US.UTF-8 
 ENV LC_ALL en_US.UTF-8
-
-RUN apt-get update
+RUN locale-gen en_US.UTF-8
 
 RUN DEBIAN_FRONTEND=noninteractive apt install -y tzdata
 
@@ -50,11 +51,7 @@ RUN git clone --depth=1 https://github.com/soxueren/openstreetmap-website.git
 
 RUN cd openstreetmap-website && bundle install  && \
         bundle exec rake yarn:install
-		
-RUN locale-gen en_US.UTF-8
-		
-RUN apt-get install -y pngcrush optipng pngquant jhead jpegoptim gifsicle
-
+	
 RUN apt-get clean
 
 CMD ["bash"]
