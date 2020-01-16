@@ -1,6 +1,6 @@
 FROM soxueren/osm-website:base
 
-ENV PGPASSWORD 402sjgs
+ENV PGPASSWORD 123456
 ENV POSTGRES_USER postgres
 ENV PG_HOST localhost
 
