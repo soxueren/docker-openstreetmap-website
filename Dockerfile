@@ -50,18 +50,29 @@ RUN git clone --depth=1 https://github.com/soxueren/openstreetmap-website.git
 
 RUN cd openstreetmap-website && bundle install  && \
         bundle exec rake yarn:install
+		
+RUN locale-gen en_US.UTF-8
+		
+RUN useradd -m linuxbrew
+
+USER linuxbrew
 
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-RUN brew install pngcrush &&  \
+
+RUN export PATH=/home/linuxbrew/.linuxbrew/bin:/usr/sbin:/usr/bin:/sbin:/bin && \
+        brew update && \
+        brew install pngcrush &&  \
         brew install optipng  && \
-        brew install  advpng  &&  \  
+        #brew install  advpng  &&  \  
         brew install optipng  &&  \
         brew install pngquant &&  \ 
         brew install  jhead  &&  \ 
         brew install  jpegoptim  &&  \ 
-        brew install  jpegtran  &&  \
+        #brew install  jpegtran  &&  \
         brew install  gifsicle &&  \ 
         brew install  svgo
+		
+USER root
 
 RUN apt-get clean
 
