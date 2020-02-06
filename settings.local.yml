@@ -1,4 +1,19 @@
 # Default editor
 default_editor: "id"
-# OAuth consumer key for id
-potlatch2_key: "2dhyEr0ri7Rrfs31MlvnlsHwmUEjMalFsprRiVNP"
+# OAuth consumer key for Potlatch 2
+potlatch2_key: "91sj9mZ4mLQUODngBtMHWR7xjhfXV3AZLTBz9mJ4"
+# OAuth consumer key for the web site
+#oauth_key: ""
+# OAuth consumer key for iD
+id_key: "xakpsuIMUwSVgCBG1WZ6iuL4jAGZHLA1Jns2lX0d"
+
+# The maximum area you're allowed to request, in square degrees
+max_request_area: 5
+# Number of GPS trace/trackpoints returned per-page
+tracepoints_per_page: 10000
+# Maximum number of nodes that will be returned by the api in a map request
+max_number_of_nodes: 100000
+# Maximum number of nodes that can be in a way (checked on save)
+max_number_of_way_nodes: 10000
+# The maximum area you're allowed to request notes from, in square degrees
+max_note_request_area: 50
