@@ -2,8 +2,9 @@ FROM soxueren/osm-website:base
 
 ENV PGDATABASE osm
 ENV PGPASSWORD 123456
-ENV POSTGRES_USER postgres
-ENV PG_HOST localhost
+ENV PGUSER postgres
+ENV PGHOST localhost
+ENV PGPORT 5432
 
 RUN apt-get update 
 
