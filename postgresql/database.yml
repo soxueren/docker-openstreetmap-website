@@ -4,9 +4,10 @@
 development: &default
   adapter: postgresql
   database: <%= ENV["PGDATABASE"] || 'osm' %>
-  username: <%= ENV["POSTGRES_USER"] || 'postgres' %>
+  username: <%= ENV["PGUSER"] || 'postgres' %>
   password: <%= ENV["PGPASSWORD"] || '402sjgs' %>
-  host: <%= ENV["PG_HOST"] || 'localhost' %>
+  host: <%= ENV["PGHOST"] || 'localhost' %>
+  port: <%= ENV["PGPORT"] || '5432' %>
   encoding: utf8
 
 # Warning: The database defined as 'test' will be erased and
