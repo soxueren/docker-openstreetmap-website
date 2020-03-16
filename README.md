@@ -19,6 +19,7 @@ ALTER TABLE public.current_way_nodes
 
 # import pbf
 ```
+# host="localhost:5432"
  osmosis --read-pbf xxx.osm.pbf --used-node --write-apidb host="localhost" database="osm"  user="postgres" password="xxxxxxx" validateSchemaVersion="no"
 ```
 ## 导入数据后需要处理的问题
