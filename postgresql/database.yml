@@ -5,7 +5,7 @@ development: &default
   adapter: postgresql
   database: <%= ENV["PGDATABASE"] || 'osm' %>
   username: <%= ENV["PGUSER"] || 'postgres' %>
-  password: <%= ENV["PGPASSWORD"] || '402sjgs' %>
+  password: <%= ENV["PGPASSWORD"] || '123456' %>
   host: <%= ENV["PGHOST"] || 'localhost' %>
   port: <%= ENV["PGPORT"] || '5432' %>
   encoding: utf8
