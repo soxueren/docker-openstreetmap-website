@@ -1,21 +1,15 @@
 -- Extension: btree_gist
-
-DROP EXTENSION btree_gist;
+DROP EXTENSION btree_gist CASCADE;
 CREATE EXTENSION btree_gist
-    SCHEMA public
-    VERSION "1.2";
+    SCHEMA public;
 
 -- Extension: hstore
-
-DROP EXTENSION hstore;
+DROP EXTENSION hstore CASCADE;
 CREATE EXTENSION hstore
-    SCHEMA public
-    VERSION "1.4";
+    SCHEMA public;
+
 
 -- Extension: postgis
-
-DROP EXTENSION postgis;
-CREATE EXTENSION postgis
-    SCHEMA public
-    VERSION "2.5.1";
-
+DROP EXTENSION postgis CASCADE;
+CREATE EXTENSION postgis 
+    SCHEMA public;
