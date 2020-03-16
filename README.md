@@ -31,8 +31,8 @@ ALTER TABLE public.changesets
     
 -- osmosis导入数据出现user_id=-1的问题
 
-UPDATE changesets set user_id=0 where user_id=-1;
-UPDATE users set id=0 where id=-1;
+UPDATE changesets set user_id=1 where user_id=-1;
+UPDATE users set id=1 where id=-1;
 
 ALTER TABLE public.changesets
     ADD CONSTRAINT changesets_user_id_fkey FOREIGN KEY (user_id)
