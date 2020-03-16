@@ -26,4 +26,4 @@ WORKDIR /openstreetmap-website
 
 EXPOSE 3000
 
-CMD ["bash"]
+CMD ["bundle", "exec", "rails" ,"server", "-b" ,"0.0.0.0"]
